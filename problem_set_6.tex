@@ -1,0 +1,104 @@
+\documentclass[11pt]{article} %Kopf mit Siegel  o h n e  Absenderleiste
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz,tikz-cd}
+\usepackage{ifthen}     % um if-Abfrage zu machen
+\usepackage{xfrac}      % for \sfrac
+\usepackage{mathtools}  % for \coloneqq
+\usepackage[normalem]{ulem}
+\usepackage[pdftitle={Problem set Algebraic Geometry 3 Winter 2022/23},pdfauthor={Luca Battistella},pdfborder={0 0 0}]{hyperref}
+\usepackage{todonotes}
+
+\pagestyle{empty}
+\input{kopf_exercises.sty}
+\textwidth=16.1truecm     %habe ich eingef_gt (1.3.00)
+\parindent0mm
+
+
+\newcounter{problem}
+\setcounter{problem}{1}
+
+\newcommand{\problem}[2][]{\bigskip\medskip {\textbf{Problem \theproblem}} \ {\em #1} {\ifthenelse{\equal{e}{#2}}{}{\\[1mm]}
+} \stepcounter{problem}}
+
+\newcommand{\bonusproblem}[1][]{\bigskip\medskip {\textbf{Bonus problem \theproblem}} {\em #1}  {(not to be handed in)\\[1mm]} \stepcounter{problem}}
+
+\long\def\symbolfootnote[#1]#2{\begingroup
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+\newcommand{\issuedate}{Nov 22}
+\newcommand{\returndate}{Nov 29, 2022}
+\newcommand{\sheetnumber}{6}
+\newcommand{\keywords}{local properties, projective varieties, homogeneous rings}
+
+
+\newcommand{\HH}{{\mathbb{H}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\kk}{{\mathbf{k}}}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Aaff}{\mathbb A}
+\newcommand{\on}{\operatorname}
+\newcommand{\Spec}{\operatorname{Spec}}
+
+
+\newcommand{\bcd}{\begin{center}\begin{tikzcd}}
+\newcommand{\ecd}{\end{tikzcd}\end{center}}
+
+\DeclareMathOperator{\Hom}{Hom}
+
+%\addtolength{\textwidth}{2.2cm}
+%\addtolength{\hoffset}{-1.1cm}
+%\addtolength{\textheight}{3.4cm}
+%\addtolength{\voffset}{-1.7cm}
+
+
+\begin{document}
+
+\uebungsblatt{\issuedate}{\returndate}
+
+\vspace{-0.6cm}
+\begin{center}
+{\LARGE\textsc{Algebraic geometry 1}}
+
+\textsc{problem set \sheetnumber}
+\end{center}
+\vspace{-0.2cm}
+\begin{center}
+\textbf{Keywords:} \keywords
+\end{center}
+\vspace{-0.2cm}
+\rule{\textwidth}{0.1mm}
+
+\problem[(3 pt)]{}
+Show that the following properties satisfy the assumptions of the Affine Communication Lemma [Vakil, Prop. 5.3.2].
+\begin{enumerate}
+ \item locally of finite type over a base ring $R$;
+ \item reduced.
+\end{enumerate}
+
+\problem[(2 pt)]{}
+Let $X=V(x_0x_2-x_1^2,x_0x_3-x_1x_2,x_1x_3-x_2^2)\subseteq \mathbb P^3$. Show that $X$ is isomorphic to $\PP^1$. Show that no two of the three equations above are enough to cut out $X$.
+
+\problem[(3 pt)]{}
+Let $R=\bigoplus R_d$ be a $\ZZ$-graded ring. Prove the following facts.
+\begin{enumerate}
+ \item A homogeneous ideal $\mathfrak p\subsetneq R$ is prime if and only if, for any pair of \emph{homogeneous} elements $a,b$ in $R$, $ab\in\mathfrak p$ implies $a\in\mathfrak p$ or $b\in\mathfrak p$.
+ \item Let $S\subseteq R$ be a multiplicative set consisting of homogeneous elements. Then $S^{-1}R$ admits a structure of $\ZZ$-graded ring making $R\to S^{-1}R$ into a graded homomorphism (of degree 0).
+ \item Every maximal homogeneous ideal of $R$ is of the form:
+ \[\ldots\oplus R_{-1}\oplus\mathfrak m\oplus R_1\oplus\ldots\]
+ for some maximal ideal $\mathfrak m$ of $R_0$.
+\end{enumerate}
+
+\problem[(2 pt)]{}
+Let $R=\bigoplus R_d$ be a $\ZZ$-graded ring, and $f\in R$ an invertible homogeneous element of positive degree. Then there is a bijection between prime ideals of $R_0$ and homogeneous prime ideals of $R$. (Hint: given $\mathfrak p\in \on{Spec}(R_0)$, define $P=\bigoplus P_d$ where $g\in P_d$ if and only if $\frac{g^{\deg(f)}}{f^d}\in\mathfrak p$. Show that $P$ is a homogeneous prime ideal of $R$, and that $P\cap R_0=\mathfrak p$.)
+
+\end{document}
