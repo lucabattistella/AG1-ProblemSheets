@@ -1,0 +1,113 @@
+\documentclass[11pt]{article} %Kopf mit Siegel  o h n e  Absenderleiste
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz,tikz-cd}
+\usepackage{ifthen}     % um if-Abfrage zu machen
+\usepackage{xfrac}      % for \sfrac
+\usepackage{mathtools}  % for \coloneqq
+\usepackage[normalem]{ulem}
+\usepackage[pdftitle={Problem set Algebraic Geometry 3 Winter 2022/23},pdfauthor={Luca Battistella},pdfborder={0 0 0}]{hyperref}
+\usepackage{todonotes}
+
+\pagestyle{empty}
+\input{kopf_exercises.sty}
+\textwidth=16.1truecm     %habe ich eingef_gt (1.3.00)
+\parindent0mm
+
+
+\newcounter{problem}
+\setcounter{problem}{1}
+
+\newcommand{\problem}[2][]{\bigskip\medskip {\textbf{Problem \theproblem}} \ {\em #1} {\ifthenelse{\equal{e}{#2}}{}{\\[1mm]}
+} \stepcounter{problem}}
+
+\newcommand{\bonusproblem}[1][]{\bigskip\medskip {\textbf{Bonus problem \theproblem}} {\em #1}  {(not to be handed in)\\[1mm]} \stepcounter{problem}}
+
+\long\def\symbolfootnote[#1]#2{\begingroup
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+\newcommand{\issuedate}{Nov 29}
+\newcommand{\returndate}{Dec 13}
+\newcommand{\sheetnumber}{8}
+\newcommand{\keywords}{projectivities, intersecting projective subvarieties, diagonals}
+
+
+\newcommand{\HH}{{\mathbb{H}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\kk}{{\mathbf{k}}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Aaff}{\mathbb A}
+\newcommand{\on}{\operatorname}
+\newcommand{\Spec}{\operatorname{Spec}}
+
+
+\newcommand{\bcd}{\begin{center}\begin{tikzcd}}
+\newcommand{\ecd}{\end{tikzcd}\end{center}}
+
+\DeclareMathOperator{\Hom}{Hom}
+
+%\addtolength{\textwidth}{2.2cm}
+%\addtolength{\hoffset}{-1.1cm}
+%\addtolength{\textheight}{3.4cm}
+%\addtolength{\voffset}{-1.7cm}
+
+
+\begin{document}
+
+\uebungsblatt{\issuedate}{\returndate}
+
+\vspace{-0.6cm}
+\begin{center}
+{\LARGE\textsc{Algebraic geometry 1}}
+
+\textsc{problem set \sheetnumber}
+\end{center}
+\vspace{-0.2cm}
+\begin{center}
+\textbf{Keywords:} \keywords
+\end{center}
+\vspace{-0.2cm}
+\rule{\textwidth}{0.1mm}
+
+\problem[(5 pts)]{}
+Automorphisms of $\PP^n(k)$ induced by linear automorphisms of $k^{n+1}$ are called \emph{projectivities}.
+\begin{enumerate}
+ \item Show that every automorphism of $\PP^1(k)$ is a \emph{projectivity}, which can be written as \[z\mapsto\frac{az+b}{cz+d}.\]
+  \item Compute the stabiliser $\on{Stab}_G([1:0])$ in $G=PGL_2(k)$ of the point $[1:0]\in\PP^1(k)$, and $\on{Stab}_G([1:0])\cap\on{Stab}_G([0:1])$.
+ \item Show that the action of $PGL_2(k)$ on $\PP^1(k)$ is sharply $3$-transitive (for every two triples of distinct points there is exactly one projectivity moving one to the other).
+ \item The \emph{cross-ratio} of four distinct points $(z_1,z_2,z_3,z_4)$ of $\PP^1(k)\setminus\{\infty\}$ is defined as:
+ \[\frac{(z_1-z_3)(z_2-z_4)}{(z_1-z_4)(z_2-z_3)}\in k.\]
+ Extend this definition in case one of the points is $\infty$. Show that projectivities preserve the cross-ratio. Conclude that the action of $PGL_2(k)$ on $\PP_1(k)$ is not $4$-transitive in general. (Bonus: what are the possible values of the cross-ratio? What happens in the limit when two points come together (over $\CC$)?)
+ 
+\end{enumerate}
+
+\problem[(4 pts)]{}
+More on projectivities.
+\begin{enumerate}
+ \item Show that the action of $PGL_{n+1}(k)$ on $\PP^n(k)$ is $2$-transitive, but not $3$-transitive in general.
+ \item An $(n+2)$-tuple of points in $\PP^n$ is said to be \emph{in general (linear) position} if no $n+1$ of them are contained in a hyperplane. Show that $PGL_{n+1}(k)$ acts transitively on the set of $(n+2)$-tuples in general position.
+ \item Let $U=D_p(f)\subset\PP^n(k)$ be the complement of a hypersurface of degree $d$. Identify $U$ with an affine algebraic variety.
+ \item Show that $PGL_{n+1}(k)$ is an affine algebraic variety.
+\end{enumerate}
+
+\problem[(5 pts)]{}
+\begin{enumerate}
+ \item Let $X$ be an irreducible projective variety of dimension $n$. Show that the affine cone $C_X$ is irreducible of dimension $n+1$.
+ \item Let $X$ and $Y$ be projective subvarieties of $\PP^n(k)$ such that $\dim(X)+\dim(Y)\geq n$. Then the intersection of $X$ and $Y$ is not empty.
+ \item Show that $\PP^m\times\PP^n$ is not isomorphic to $\PP^{m+n}$ (unless $m$ or $n$ is $0$).
+ \item Show that there is no morphism $\PP^N\to\PP^n$ for $N>n$ (unless $n=0$).
+\end{enumerate}
+
+\problem[(2 pts)]{}
+Show that the diagonal of a scheme is always a locally closed immersion (closed in an open).
+\end{document}

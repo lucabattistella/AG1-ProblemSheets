@@ -33,10 +33,10 @@
 \long\def\symbolfootnote[#1]#2{\begingroup
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
 
-\newcommand{\issuedate}{Nov 29}
-\newcommand{\returndate}{--}
-\newcommand{\sheetnumber}{7}
-\newcommand{\keywords}{closed subvarieties, conics, twisted cubics, and some topology}
+\newcommand{\issuedate}{Dec 20}
+\newcommand{\returndate}{Jan 10}
+\newcommand{\sheetnumber}{10}
+\newcommand{\keywords}{projectivities, linear subspaces, conics, and Hilbert polynomials}
 
 
 \newcommand{\HH}{{\mathbb{H}}}
@@ -79,28 +79,29 @@
 \vspace{-0.2cm}
 \rule{\textwidth}{0.1mm}
 
-\problem{}
-Let $Y$ be an algebraic prevariety, and let $X\subseteq Y$ be a closed subset. Show that $X$ admits a unique structure of prevariety making $\iota\colon X\hookrightarrow Y$ into a closed embedding (a morphism of locally ringed spaces such that $\OO_Y\twoheadrightarrow\iota_*\OO_X$).
+\problem[(3 pt)]{}
 
-\problem{}
-Let $k$ be an algebraically closed field of characteristic different from $2$.
+Linear subspaces and projectivities.
+
 \begin{enumerate}
- \item Let $X_2\subseteq\Aaff^2(k)$ be the vanishing locus of an irreducible polynomial of degree $2$. Show that after an affine (linear $+$ translation) change of coordinates, $X_2$ can be identified with the vanishing locus of either $f_1=x_1^2-x_2$ or $f_2=x_1x_2-1$.
- \item Classify all conics (hypersurfaces of degree $2$) in $\PP^2(k)$.
- \item Show that an integral (irreducible and reduced) conic is isomorphic to $\PP^1(k)$.
- \item Bonus: find a field $k$ and an integral conic in $\PP^2_k$ that is not isomorphic to $\PP^1_k$.
+ \item Let $r$ and $s$ be disjoint lines in $\PP^3(k)$. For every point $p\in\PP^3(k)\setminus(r\cup s)$, there exists a unique line $l_p$ passing through $p$ and intersecting both $r$ and $s$.
+ \item Let $\phi$ be a projectivity of $\PP^n(k)$. Show that the locus of fixed points of $\phi$ is a union of linear supspaces $L_1,\ldots,L_r$, such that $L_i$ does not meet the linear span of $(L_j)_{j\neq i}$.
+ \item Suppose that the fixed locus of $\phi\in PGL_4(k)$ consists of two lines $r$ and $s$. For every point $p\in\PP^3(k)\setminus(r\cup s)$, the line joining $p$ to $f(p)$ meets both $r$ and $s$.
 \end{enumerate}
 
-\problem{}
-Let $X=V(x_0x_2-x_1^2,x_0x_3-x_1x_2,x_1x_3-x_2^2)\subseteq \mathbb P^3$. Show that $X$ is isomorphic to $\PP^1$. Show that no two of the three equations above are enough to cut out $X$.
+\problem[(2 pt)]{}
+Let $r$ be a line in $\PP^2(\CC)$. Show that $r$ contains either one or infinitely many real points. (Hint: use conjugation.)
 
-\problem{}
-Let $f\colon X\to Y$ be a continuous map of topological spaces.
+\problem[(3 pt)]{}
+Let $k$ be algebraically closed. Let $p_1,\ldots,p_5$ be distinct points of $\PP^2(k)$.
 \begin{enumerate}
- \item Show that $X$ is Hausdorff if and only if $\Delta_X\subseteq X\times X$ is closed.
- \item Some topologists would call $f$ \emph{proper} if the preimage of any compact subset of $Y$ is compact (some algebraic geometers would call this a quasi-compact morphism). Show that $f$ is proper and closed if and only if $f$ is universally closed, in the sense that for every topological space $Z$ and continuous map $g\colon Z\to Y$, the fibre product $X\times_Y Z\to Z$ is a closed map.
+ \item Show that there exists at least a conic $C$ passing through $p_1,\ldots,p_5$.
+ \item $C$ is non-degenerate (reduced and irreducible) if and only if any three of the points are not collinear. Moreover, in this case $C$ is unique.
+ \item If $C$ is degenerate, then it is unique if and only if any four of the points are not collinear.
 \end{enumerate}
-Note: in this exercise, products are endowed with the product topology.
 
 
+\problem[(3 pt)]{}
+Compute the degrees of the Segre and Veronese embeddings.
+%\problem[]{}
 \end{document}

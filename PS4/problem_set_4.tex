@@ -33,10 +33,10 @@
 \long\def\symbolfootnote[#1]#2{\begingroup
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
 
-\newcommand{\issuedate}{Nov 29}
-\newcommand{\returndate}{--}
-\newcommand{\sheetnumber}{7}
-\newcommand{\keywords}{closed subvarieties, conics, twisted cubics, and some topology}
+\newcommand{\issuedate}{Nov 08}
+\newcommand{\returndate}{Nov 15, 2022}
+\newcommand{\sheetnumber}{4}
+\newcommand{\keywords}{Schemes - topology and morphisms, gluing, fibre products}
 
 
 \newcommand{\HH}{{\mathbb{H}}}
@@ -44,7 +44,6 @@
 \newcommand{\CC}{{\mathbb{C}}}
 \newcommand{\ZZ}{{\mathbb{Z}}}
 \newcommand{\kk}{{\mathbf{k}}}
-\newcommand{\OO}{\mathcal{O}}
 \newcommand{\PP}{\mathbb P}
 \newcommand{\Aaff}{\mathbb A}
 \newcommand{\on}{\operatorname}
@@ -79,28 +78,35 @@
 \vspace{-0.2cm}
 \rule{\textwidth}{0.1mm}
 
-\problem{}
-Let $Y$ be an algebraic prevariety, and let $X\subseteq Y$ be a closed subset. Show that $X$ admits a unique structure of prevariety making $\iota\colon X\hookrightarrow Y$ into a closed embedding (a morphism of locally ringed spaces such that $\OO_Y\twoheadrightarrow\iota_*\OO_X$).
+\problem[(1 pt)]{}
+Show that every affine scheme with the Zariski topology is quasi-compact.
 
-\problem{}
-Let $k$ be an algebraically closed field of characteristic different from $2$.
+\problem[(2 pt)]{}
 \begin{enumerate}
- \item Let $X_2\subseteq\Aaff^2(k)$ be the vanishing locus of an irreducible polynomial of degree $2$. Show that after an affine (linear $+$ translation) change of coordinates, $X_2$ can be identified with the vanishing locus of either $f_1=x_1^2-x_2$ or $f_2=x_1x_2-1$.
- \item Classify all conics (hypersurfaces of degree $2$) in $\PP^2(k)$.
- \item Show that an integral (irreducible and reduced) conic is isomorphic to $\PP^1(k)$.
- \item Bonus: find a field $k$ and an integral conic in $\PP^2_k$ that is not isomorphic to $\PP^1_k$.
+ \item Show that every scheme admits a unique morphism to $\Spec(\ZZ)$.
+ \item Show that global regular functions on a scheme $X$ are in bijection with morphisms \[X\to\Aaff^1_{\ZZ}=\Spec(\ZZ[x]).\]
+\item Consider the ring homomorphisms $\alpha\colon \ZZ[x]\to\ZZ[x]\otimes_{\ZZ}\ZZ[x]$ mapping $x$ to $x\otimes1+1\otimes x$, and $\mu\colon \ZZ[x]\to\ZZ[x]\otimes_{\ZZ}\ZZ[x]$ mapping $x$ to $x\otimes x$. Can you interpret them in view of the previous point?
 \end{enumerate}
 
-\problem{}
-Let $X=V(x_0x_2-x_1^2,x_0x_3-x_1x_2,x_1x_3-x_2^2)\subseteq \mathbb P^3$. Show that $X$ is isomorphic to $\PP^1$. Show that no two of the three equations above are enough to cut out $X$.
-
-\problem{}
-Let $f\colon X\to Y$ be a continuous map of topological spaces.
+\problem[(2 pt)]{}
 \begin{enumerate}
- \item Show that $X$ is Hausdorff if and only if $\Delta_X\subseteq X\times X$ is closed.
- \item Some topologists would call $f$ \emph{proper} if the preimage of any compact subset of $Y$ is compact (some algebraic geometers would call this a quasi-compact morphism). Show that $f$ is proper and closed if and only if $f$ is universally closed, in the sense that for every topological space $Z$ and continuous map $g\colon Z\to Y$, the fibre product $X\times_Y Z\to Z$ is a closed map.
+ \item Consider the scheme $U=\mathbb{A}^2_{\ZZ}\setminus V(x_1,x_2)$. Show that it is not affine. (Hint: compute global regular functions.)
+ \item Produce an example of a scheme with an affine cover, such that the intersection of two affine opens is not affine. (Hint: gluing.)
 \end{enumerate}
-Note: in this exercise, products are endowed with the product topology.
 
+\problem[(3 pt)]{}
+Let $(f,f^\#):X\to Y$ be a morphism of affine algebraic varieties over $\kk$. Prove or disprove:
+\begin{enumerate}
+ \item $f$ is surjective if and only if $f^\#$ is injective.
+ \item $f$ is injective if and only if $f^\#$ is surjective.
+\end{enumerate}
+Would anything be different if we considered a morphism of affine schemes?
+
+\problem[(3 pt)]{}
+\begin{enumerate}
+ \item Show that $\Spec(\CC\otimes_{\RR}\CC)$ consists of two points.
+ \item Let $X$ and $Y$ be algebraic varieties over an algebraically closed field $\kk$. Show that $X\times Y$ is an algebraic variety, whose underlying set $\underline{X\times Y}$ is $\underline{X}\times\underline{Y}$.
+ \item Show that if $X$ and $Y$ are irreducible, then so is $X\times Y$.
+\end{enumerate}
 
 \end{document}

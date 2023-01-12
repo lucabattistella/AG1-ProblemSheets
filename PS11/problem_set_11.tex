@@ -13,7 +13,7 @@
 \usepackage{xfrac}      % for \sfrac
 \usepackage{mathtools}  % for \coloneqq
 \usepackage[normalem]{ulem}
-\usepackage[pdftitle={Problem set Algebraic Geometry 3 Winter 2022/23},pdfauthor={Luca Battistella},pdfborder={0 0 0}]{hyperref}
+\usepackage[pdftitle={Problem set Algebraic Geometry 1 Winter 2022/23},pdfauthor={Luca Battistella},pdfborder={0 0 0}]{hyperref}
 \usepackage{todonotes}
 
 \pagestyle{empty}
@@ -33,10 +33,10 @@
 \long\def\symbolfootnote[#1]#2{\begingroup
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
 
-\newcommand{\issuedate}{Nov 29}
+\newcommand{\issuedate}{Jan 11}
 \newcommand{\returndate}{--}
-\newcommand{\sheetnumber}{7}
-\newcommand{\keywords}{closed subvarieties, conics, twisted cubics, and some topology}
+\newcommand{\sheetnumber}{11}
+\newcommand{\keywords}{B\'ezout, regularity and smoothness}
 
 
 \newcommand{\HH}{{\mathbb{H}}}
@@ -80,27 +80,34 @@
 \rule{\textwidth}{0.1mm}
 
 \problem{}
-Let $Y$ be an algebraic prevariety, and let $X\subseteq Y$ be a closed subset. Show that $X$ admits a unique structure of prevariety making $\iota\colon X\hookrightarrow Y$ into a closed embedding (a morphism of locally ringed spaces such that $\OO_Y\twoheadrightarrow\iota_*\OO_X$).
+Consider the conic $C=V_+(x_0x_1-x_2^2)\subseteq\PP^2$ and the lines $L_1=V_+(x_2),\ L_2=V_+(x_0-x_2)$. Compute the intersection of $C$ with $L_i,\ i=1,2$ (with multiplicities).
 
 \problem{}
-Let $k$ be an algebraically closed field of characteristic different from $2$.
+An irreducible curve of degree $d$ in $\PP^n$ is contained in a linear subspace of dimension at most $d$.
+
+\problem{}
+A dimension $0$ Noetherian local ring is regular if and only if it is a field.
+
+A dimension $1$ Noetherian local ring is regular if and only if it is a PID.
+
+\problem{}
+\emph{The corank of the Jacobian matrix does not depend on the presentation.}
+
+Let $R=k[x_1,\ldots,x_n]/(f_1,\ldots,f_r)$ and $\underline{a}\in k^n$ such that $f_i(\underline{a})=0$ for all $i=1,\ldots,r$.
+
+Show that the corank of $\on{Jac}(F)(\underline{a})$ is unaffected by:
 \begin{enumerate}
- \item Let $X_2\subseteq\Aaff^2(k)$ be the vanishing locus of an irreducible polynomial of degree $2$. Show that after an affine (linear $+$ translation) change of coordinates, $X_2$ can be identified with the vanishing locus of either $f_1=x_1^2-x_2$ or $f_2=x_1x_2-1$.
- \item Classify all conics (hypersurfaces of degree $2$) in $\PP^2(k)$.
- \item Show that an integral (irreducible and reduced) conic is isomorphic to $\PP^1(k)$.
- \item Bonus: find a field $k$ and an integral conic in $\PP^2_k$ that is not isomorphic to $\PP^1_k$.
+ \item adding to $(f_1,\ldots,f_r)$ another polynomial from the ideal they generate;
+ \item adding to the generators of $R$ a new variable $x_{n+1}$, and to the ideal a new relation of the form $x_{n+1}-g(x_1,\ldots,x_n)$. 
 \end{enumerate}
 
-\problem{}
-Let $X=V(x_0x_2-x_1^2,x_0x_3-x_1x_2,x_1x_3-x_2^2)\subseteq \mathbb P^3$. Show that $X$ is isomorphic to $\PP^1$. Show that no two of the three equations above are enough to cut out $X$.
 
-\problem{}
-Let $f\colon X\to Y$ be a continuous map of topological spaces.
+\problem{}\emph{Projective Jacobian criterion.}
 \begin{enumerate}
- \item Show that $X$ is Hausdorff if and only if $\Delta_X\subseteq X\times X$ is closed.
- \item Some topologists would call $f$ \emph{proper} if the preimage of any compact subset of $Y$ is compact (some algebraic geometers would call this a quasi-compact morphism). Show that $f$ is proper and closed if and only if $f$ is universally closed, in the sense that for every topological space $Z$ and continuous map $g\colon Z\to Y$, the fibre product $X\times_Y Z\to Z$ is a closed map.
+ \item Let $f\in k[x_0,\ldots,x_d]$ be a homogeneous polynomial of degree $d$. Then $\sum_{i=0}^nx_i\frac{\partial f}{\partial x_i}=d\cdot f$.
+ \item Let $\underline{a}\in X\subseteq \PP^n(k)$, with $I(X)=\langle f_1,\ldots,f_r\rangle$. Prove that $X$ is smooth at $\underline{a}$ if and only if the rank of the $r\times(n+1)$ matrix $\on{Jac}(F)(\underline{a})=\left(\frac{\partial f_i}{\partial x_j}(\underline{a})\right)$ is at least $n-\on{dim}_aX$ (note that the matrix is only well-defined up to scalar, which does not affect the rank).
+ \item Let $X\subseteq\PP^3(k)$ be the twisted cubic $V_+(x_0x_2-x_1^3,x_0x_3-x_1x_2,x_1x_3-x_2^2)$. Use the previous point to show that $X$ is smooth.
 \end{enumerate}
-Note: in this exercise, products are endowed with the product topology.
 
 
 \end{document}

@@ -13,7 +13,7 @@
 \usepackage{xfrac}      % for \sfrac
 \usepackage{mathtools}  % for \coloneqq
 \usepackage[normalem]{ulem}
-\usepackage[pdftitle={Problem set Algebraic Geometry 3 Winter 2022/23},pdfauthor={Luca Battistella},pdfborder={0 0 0}]{hyperref}
+\usepackage[pdftitle={Problem set Algebraic Geometry 1 Winter 2022/23},pdfauthor={Luca Battistella},pdfborder={0 0 0}]{hyperref}
 \usepackage{todonotes}
 
 \pagestyle{empty}
@@ -33,10 +33,10 @@
 \long\def\symbolfootnote[#1]#2{\begingroup
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
 
-\newcommand{\issuedate}{Nov 22}
-\newcommand{\returndate}{Nov 29, 2022}
-\newcommand{\sheetnumber}{6}
-\newcommand{\keywords}{local properties, graded rings}
+\newcommand{\issuedate}{Nov 15, 2022}
+\newcommand{\returndate}{--}
+\newcommand{\sheetnumber}{5}
+\newcommand{\keywords}{Fibres and sheafification.}
 
 
 \newcommand{\HH}{{\mathbb{H}}}
@@ -78,27 +78,21 @@
 \vspace{-0.2cm}
 \rule{\textwidth}{0.1mm}
 
-\problem[(4 pt)]{}
-Show that the following properties satisfy the assumptions of the Affine Communication Lemma [Vakil, Prop. 5.3.2].
+\problem{}
 \begin{enumerate}
- \item locally of finite type over a base ring $R$;
- \item reduced.
+ \item Let $f\colon X\to Y$ be a map of sets, and let $y\in Y$ be a point. Show that the fibre product $y\times_Y X$ can be identified with the fibre $f^{-1}(y)$.
+ \item Let $f_i\colon X_i\to S,\ i=1,2,$ be morphisms of schemes, and let $x\in X_1$ be a point. Show that the fibre of $X_1\times_S X_2$ over $x$ is isomorphic to the fibre of $f_2$ over $f_1(x)$.
 \end{enumerate}
 
-%\problem[(2 pt)]{}
-%Let $X=V(x_0x_2-x_1^2,x_0x_3-x_1x_2,x_1x_3-x_2^2)\subseteq \mathbb P^3$. Show that $X$ is isomorphic to $\PP^1$. Show that no two of the three equations above are enough to cut out $X$.
+\problem{}
+Let $F$ be a presheaf (of sets) on $X$, and $x\in X$ a point. Show that the stalk of the sheafification $F^{sh}$ at $x$ is isomorphic to $F_x$.
 
-\problem[(3 pt)]{}
-Let $R=\bigoplus R_d$ be a $\ZZ$-graded ring. Prove the following facts.
-\begin{enumerate}
- \item A homogeneous ideal $\mathfrak p\subsetneq R$ is prime if and only if, for any pair of \emph{homogeneous} elements $a,b$ in $R$, $ab\in\mathfrak p$ implies $a\in\mathfrak p$ or $b\in\mathfrak p$.
- \item Let $S\subseteq R$ be a multiplicative set consisting of homogeneous elements. Then $S^{-1}R$ admits a natural structure of $\ZZ$-graded ring making $R\to S^{-1}R$ into a graded homomorphism (of degree 0).
- \item Every maximal homogeneous ideal of $R$ is of the form:
- \[\ldots\oplus R_{-1}\oplus\mathfrak m\oplus R_1\oplus\ldots\]
- for some maximal ideal $\mathfrak m$ of $R_0$.
-\end{enumerate}
+\problem{}
+Let $a\colon F\to G$ be a morphism of sheaves (of sets) on $X$. Show that $a$ is an epimorphism if and only if $a_x\colon F_x\to G_x$ is surjective for every $x\in X$.
 
-\problem[(3 pt)]{}
-Let $R=\bigoplus R_d$ be a $\ZZ$-graded ring, and $f\in R$ an invertible homogeneous element of positive degree $e$. Then there is a bijection between prime ideals of $R_0$ and homogeneous prime ideals of $R$. (Hint: given $\mathfrak p\in \on{Spec}(R_0)$, define $P=\bigoplus P_d$ where $g\in P_d\subseteq R_d$ if and only if \[\frac{g^e}{f^d}\in\mathfrak p.\] Show that $P$ is a homogeneous prime ideal of $R$, and that $P\cap R_0=\mathfrak p$.)
+\problem{}
+Let $s\in F(U)$ be a section of the sheaf of Abelian groups $F$ over the open subset $U\subseteq X$. Show that the support of $s$, i.e. the set $\{x\in U|0\neq s_x\in F_x\}$, is closed in $U$.
 
+\problem{}
+Construct a scheme whose underlying topological space consists of three points $X=\{p,q,\eta\}$, such that $p$ and $q$ are closed, and $\eta$ is open.
 \end{document}

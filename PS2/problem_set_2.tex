@@ -1,0 +1,96 @@
+\documentclass[11pt]{article} %Kopf mit Siegel  o h n e  Absenderleiste
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz,tikz-cd}
+\usepackage{ifthen}     % um if-Abfrage zu machen
+\usepackage{xfrac}      % for \sfrac
+\usepackage{mathtools}  % for \coloneqq
+\usepackage[normalem]{ulem}
+\usepackage[pdftitle={Problem set Algebraic Geometry 2 Winter 2022/23},pdfauthor={Luca Battistella},pdfborder={0 0 0}]{hyperref}
+\usepackage{todonotes}
+
+\pagestyle{empty}
+\input{kopf_exercises.sty}
+\textwidth=16.1truecm     %habe ich eingef_gt (1.3.00)
+\parindent0mm
+
+
+\newcounter{problem}
+\setcounter{problem}{1}
+
+\newcommand{\problem}[2][]{\bigskip\medskip {\textbf{Problem \theproblem}} \ {\em #1} {\ifthenelse{\equal{e}{#2}}{}{\\[1mm]}
+} \stepcounter{problem}}
+
+\newcommand{\bonusproblem}[1][]{\bigskip\medskip {\textbf{Bonus problem \theproblem}} {\em #1}  {(not to be handed in)\\[1mm]} \stepcounter{problem}}
+
+\long\def\symbolfootnote[#1]#2{\begingroup
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+\newcommand{\issuedate}{Oct 25, 2022}
+\newcommand{\returndate}{Nov 01, 2022}
+\newcommand{\sheetnumber}{2}
+\newcommand{\keywords}{Irreducibility, dimension, regular functions, and morphisms}
+
+
+\newcommand{\HH}{{\mathbb{H}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Aaff}{\mathbb A}
+
+
+\newcommand{\bcd}{\begin{center}\begin{tikzcd}}
+\newcommand{\ecd}{\end{tikzcd}\end{center}}
+
+\DeclareMathOperator{\Hom}{Hom}
+
+%\addtolength{\textwidth}{2.2cm}
+%\addtolength{\hoffset}{-1.1cm}
+%\addtolength{\textheight}{3.4cm}
+%\addtolength{\voffset}{-1.7cm}
+
+
+\begin{document}
+
+\uebungsblatt{\issuedate}{\returndate}
+
+\vspace{-0.8cm}
+\begin{center}
+{\LARGE\textsc{Algebraic geometry 1}}
+
+\textsc{problem set \sheetnumber}
+\end{center}
+\vspace{-0.2cm}
+\begin{center}
+\textbf{Keywords:} \keywords
+\end{center}
+\vspace{-0.2cm}
+\rule{\textwidth}{0.1mm}
+
+
+\textit{Every problem is worth 2 points.}
+
+\problem{}
+Let $X$ be a Hausdorff topological space (i.e. for every pair of distinct points $x,y\in X$ there exist disjoint open subsets $U,V\subseteq X$ such that $x\in U,y\in V$). A subspace of $X$ is irreducible if and only if it is a singleton.
+
+\problem{}
+Let $f\colon X\to Y$ be a continuous and open map of topological spaces. Suppose that $Y$ is irreducible, and so is every fibre of $f$. Then $X$ is irreducible as well.
+
+\problem{}
+Let $X$ be an irreducible topological space of finite dimension $n$. For any subspace $Y\subseteq X$, $\dim(Y)\leq\dim(X)$.
+
+\problem{}
+Let $\varphi\colon R\to S$ be a homomorphism of local rings. Show that $\varphi^{-1}(\mathfrak{m}_S)=\mathfrak{m}_R$ if and only if $\varphi(\mathfrak{m}_R)\subseteq\mathfrak{m}_S$.
+
+\problem{}
+Let $GL_n(k)$ denote the set of invertible $n\times n$ matrices over $k$. Show that it is an affine algebraic variety of dimension $n^2$.
+
+\end{document}

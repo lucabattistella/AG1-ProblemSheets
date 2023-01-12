@@ -1,0 +1,162 @@
+%
+% Institutsbriefkopf des mathematischen Institutes
+% Erstellt:  05.06.97 Jan Becker
+%
+
+\newlength{\Uwd}
+\newlength{\Awd}
+\font\ka=cmcsc10  scaled 1095
+\font\kb=cmr12    scaled 1095
+\font\kc=cmr10    scaled 1000
+\font\ke=cmss10   scaled 1000
+%\font\ks=cmhdseal scaled 1000
+\font\kh=cmr12    scaled 1150
+\font\ku=cmbx12   scaled 1728
+\catcode`@=11
+
+\def\Kopf#1#2#3#4#5#6{
+\hbox{
+ \settowidth{\Uwd}{\ku \quad Universit\"at Heidelberg\quad\ } %\quad
+ \settowidth{\Awd}{\kc Im Neuenheimer Feld 288}
+
+ \vspace*{7truemm}
+ \raisebox{-20.3mm}{\ks A}
+ {\kc\hspace{.2em}}
+ \parbox[t]{\Uwd}{\centering{RUPRECHT-KARLS-UNIVERSIT\"AT HEIDELBERG } \\[1.3ex]  %\ku
+                  \centering {\sc Mathematisches Institut} \\[1.5ex]                       %\kh%1.5
+                  \centering{\ka #1\\
+                  \centering{\kc #2}} }
+ \hfill
+ \ \ \parbox[t]{\Awd}{
+               }
+}
+}
+
+\newcommand{\uebungsblatt}[2]{
+\mbox{}\vspace{-2.8cm}
+
+\hspace{-2cm}
+%\hbox{\Kopf{\small Prof.\ Dr.\ O. Venjakob}{}{5697}{venjakob}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small Prof.\ Dr.\ E. Freitag}{}{5762}{freitag}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small Prof.\ Dr.\ K. Wingberg}{}{4897}{wingberg}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small Dr.\ R. Busam}{}{5759}{busam}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small Der Dekan}{}{5758}{dekanat}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\tiny Forschergruppe ``Arithmethik''}{}{5685}{}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small B. Schmoetten-Jonas}{}{5767}{schmoett}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\ }{}{5767}{schmoett}{mathi.uni-heidelberg.de}{5697}}
+%\hbox{\Kopf{\ }{}{5767}{schmoett}{mathi.uni-heidelberg.de}{5697}}
+
+%\\[1.5truecm]
+
+\vspace*{-10mm}
+%
+\mbox{}\hfill Luca Battistella, battistella@math.uni-frankfurt.de
+
+\mbox{}\hfill Arne Kuhrs, kuhrs@math.uni-frankfurt.de
+
+%\mbox{}\hfill \textit{Heidelberg, \heute}
+\mbox{}\hfill Date out: \textit{#1}, Date in: \textit{#2}
+\par\bigskip\bigskip\noindent
+}
+
+\newcommand{\intestazione}[1]{
+\mbox{}\vspace{-2.8cm}
+
+\hspace{-2cm}
+%\hbox{\Kopf{\small Prof.\ Dr.\ O. Venjakob}{}{5697}{venjakob}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small Prof.\ Dr.\ E. Freitag}{}{5762}{freitag}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small Prof.\ Dr.\ K. Wingberg}{}{4897}{wingberg}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small Dr.\ R. Busam}{}{5759}{busam}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small Der Dekan}{}{5758}{dekanat}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\tiny Forschergruppe ``Arithmethik''}{}{5685}{}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\small B. Schmoetten-Jonas}{}{5767}{schmoett}{mathi.uni-heidelberg.de}}
+%\hbox{\Kopf{\ }{}{5767}{schmoett}{mathi.uni-heidelberg.de}{5697}}
+\hbox{\Kopf{\ }{}{5767}{schmoett}{mathi.uni-heidelberg.de}{5697}}
+
+%\\[1.5truecm]
+
+\vspace*{-6mm}
+%
+\mbox{}\hfill Vorlesung Differentialgeometrie II
+
+%\mbox{}\hfill \textit{Heidelberg, \heute}
+\mbox{}\hfill \textit{Heidelberg, #1}
+\bn\bn
+}
+
+\newcommand{\titolo}[3]{
+
+\vspace{-1.4cm}
+
+\begin{center}
+\textsc{\"Ubungsblatt #1}
+\end{center}
+\vspace{-0.2cm}
+\begin{center}
+\textbf{#2}
+\end{center}
+\vspace{-0.2cm}
+\begin{center}
+\textit{#3}\\
+\end{center}
+\rule{\textwidth}{0.1mm}
+
+}
+
+\newcommand{\examtitle}{
+
+\vspace{-1.4cm}
+
+\begin{center}
+\textsc{Klausur}
+\end{center}
+\vspace{-0.2cm}
+%\center{\textbf{#2}}
+%\vspace{-0.2cm}
+%\center{\textit{#3}}\\
+\rule{\textwidth}{0.1mm}
+
+}
+
+
+\newcommand{\mockexamtitle}{
+
+\vspace{-1.4cm}
+
+\begin{center}
+\textsc{Probeklausur}
+\end{center}
+\vspace{-0.2cm}
+%\center{\textbf{#2}}
+%\vspace{-0.2cm}
+%\center{\textit{#3}}\\
+\rule{\textwidth}{0.1mm}
+
+}
+
+\newcommand{\secondexamtitle}{
+
+\vspace{-1.4cm}
+
+\begin{center}
+\textsc{Nachklausur}
+\end{center}
+\vspace{-0.2cm}
+%\center{\textbf{#2}}
+%\vspace{-0.2cm}
+%\center{\textit{#3}}\\
+\rule{\textwidth}{0.1mm}
+
+}
+
+
+
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}
+\newtheorem{aufgabe}{Aufgabe}
+
+\catcode`@=12
+\setlength{\topmargin}{-15pt}
+\endinput
+
+
