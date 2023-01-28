@@ -1,0 +1,94 @@
+\documentclass[11pt]{article} %Kopf mit Siegel  o h n e  Absenderleiste
+\usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz,tikz-cd}
+\usepackage{ifthen}     % um if-Abfrage zu machen
+\usepackage{xfrac}      % for \sfrac
+\usepackage{mathtools}  % for \coloneqq
+\usepackage[normalem]{ulem}
+\usepackage[pdftitle={Problem set Algebraic Geometry 3 Winter 2022/23},pdfauthor={Luca Battistella},pdfborder={0 0 0}]{hyperref}
+
+\pagestyle{empty}
+\input{kopf_exercises.sty}
+\textwidth=16.1truecm     %habe ich eingef_gt (1.3.00)
+\parindent0mm
+
+
+\newcounter{problem}
+\setcounter{problem}{1}
+
+\newcommand{\problem}[2][]{\bigskip\medskip {\textbf{Problem \theproblem}} \ {\em #1} {\ifthenelse{\equal{e}{#2}}{}{\\[1mm]}
+} \stepcounter{problem}}
+
+\newcommand{\bonusproblem}[1][]{\bigskip\medskip {\textbf{Bonus problem \theproblem}} {\em #1}  {(not to be handed in)\\[1mm]} \stepcounter{problem}}
+
+\long\def\symbolfootnote[#1]#2{\begingroup
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+\newcommand{\issuedate}{Jan 24}
+\newcommand{\returndate}{-}
+\newcommand{\sheetnumber}{13}
+\newcommand{\keywords}{Grassmannian, Zariski tangent space}
+
+
+\newcommand{\HH}{{\mathbb{H}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\kk}{{\mathbf{k}}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Aaff}{\mathbb A}
+\newcommand{\on}{\operatorname}
+\newcommand{\Spec}{\operatorname{Spec}}
+
+
+\newcommand{\bcd}{\begin{center}\begin{tikzcd}}
+\newcommand{\ecd}{\end{tikzcd}\end{center}}
+
+\DeclareMathOperator{\Hom}{Hom}
+
+%\addtolength{\textwidth}{2.2cm}
+%\addtolength{\hoffset}{-1.1cm}
+%\addtolength{\textheight}{3.4cm}
+%\addtolength{\voffset}{-1.7cm}
+
+
+\begin{document}
+
+\uebungsblatt{\issuedate}{\returndate}
+
+\vspace{-0.6cm}
+\begin{center}
+{\LARGE\textsc{Algebraic geometry 1}}
+
+\textsc{problem set \sheetnumber}
+\end{center}
+\vspace{-0.2cm}
+\begin{center}
+\textbf{Keywords:} \keywords
+\end{center}
+\vspace{-0.2cm}
+\rule{\textwidth}{0.1mm}
+
+\problem{}
+
+Let $G(2,4) \subset \PP^5$ be the Grassmannian of lines in $\PP^3$. We denote the homogenoeus Plücker coordinates of $G(2,4)$ in $\PP^5$ by $x_{i,j}$ for $1 \leq i < j \leq 4$. Show:
+
+$$G(2,4) = V(x_{1,2}x_{3,4} - x_{1,3}x_{2,4} + x_{1,4}x_{2,3}).$$
+
+\problem{}
+Let $L \subset \PP^3$ be a fixed line. Let $H_L \subset G(2,4)$ be the locus of lines which meet $L$. Consider the incidence correspondence $$I = \{(p,l) \in \PP^3 \times G(2,4) : p \in l\} \subset \PP^3 \times G(2,4).$$ Show that $I$ is a closed subvariety of $\PP^3 \times G(2,4)$. Conclude that $H_L$ is a closed subvariety of $G(2,4)$.
+
+
+\problem{}
+Prove that the Zariski tangent space at the point $L \in G(k,n)$ is canonically isomorphic to $L^* \otimes K^n / L$ (or equivalently to $\Hom(L,K^{n}/L)$).
+
+\end{document}
